@@ -9,10 +9,10 @@ class Queue(AbstractQueue):
         return len(self._queue)
 
     def enqueue(self, value):
-        self._queue.append(value)
+        return self._queue.append(value)
 
     def dequeue(self):
-        self._queue.pop(0)
+        return self._queue.pop(0)
 
     def search(self, index):
         if index in range(self.__len__()):
