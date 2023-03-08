@@ -20,8 +20,9 @@ def process(path_file, instance: Queue):
         sys.stdout.write(str(file))
 
 
-def remove(instance):
-    """Aqui irá sua implementação"""
+def remove(instance: Queue):
+    file = instance.dequeue()["nome_do_arquivo"]
+    sys.stdout.write(f"Arquivo {file} removido com sucesso\n")
 
 
 def file_metadata(instance, position):
