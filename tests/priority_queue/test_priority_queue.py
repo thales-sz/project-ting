@@ -14,5 +14,9 @@ def test_basic_priority_queueing():
 
     with pytest.raises(IndexError):
         queue.search(89)
-    
+
     assert queue.__len__() == 2
+    assert queue.search(0) == MOCK_2
+    assert queue.search(1) == MOCK_1
+    assert queue.dequeue() == MOCK_2
+    assert queue.__len__() == 1
