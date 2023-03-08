@@ -25,7 +25,7 @@ def remove(instance: Queue):
         file = instance.dequeue()["nome_do_arquivo"]
         sys.stdout.write(f"Arquivo {file} removido com sucesso\n")
     except IndexError:
-        sys.stdout.write("Não há elementos")
+        sys.stdout.write("Não há elementos\n")
 
 
 def file_metadata(instance, position):
